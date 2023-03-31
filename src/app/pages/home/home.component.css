@@ -23,13 +23,12 @@
 
 .rowposter{
     display: flex;
-    overflow-y: hidden;
+    overflow-y: scroll;
     overflow-x: scroll;
 }
 
 .rowimg
 {
-    max-height: 100px;
     object-fit: contain;
     width: 100%;
     box-sizing: content-box;
@@ -51,3 +50,69 @@
 {
     display: none;
 }
+
+@media only screen and (max-width: 700px) and  (orientation: landscape){
+   
+    .contain{
+          background-color:skyblue;
+    }
+    .rowimg
+  {
+    object-fit: contain;
+    width: 100%;
+    box-sizing: content-box;
+    transition: transform 450ms;
+    margin-right: 7px;
+  }
+  .rowimg:hover
+{
+    transform: scale(1.09);
+    cursor: pointer;
+}
+
+.largeposter{
+    max-height: 300px;
+}
+
+.rowposter::-webkit-scrollbar
+{
+    display: none;
+}
+}
+
+@media only screen and (max-width: 400px) and  (orientation: portrait){
+
+    .contain{
+        background-color:green; 
+  }
+  .rowimg
+  {
+    object-fit: contain;
+    width: 100%;
+    box-sizing: content-box;
+    transition: transform 450ms;
+    margin-right: 7px;
+  }
+
+  .rowimg:hover
+{
+    transform: scale(1.09);
+    cursor: pointer;
+}
+
+.largeposter{
+    max-height: 300px;
+}
+
+.rowposter::-webkit-scrollbar
+{
+    display: none;
+}
+}
+    
+    .img{
+        width: 100%;
+    height: 100%;
+    border-radius: 1.1625em;
+    margin-right: 7px ;
+    }

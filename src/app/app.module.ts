@@ -7,6 +7,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { MovieApiServiceService } from './service/movie-api-service.service';
 
 import {ReactiveFormsModule} from '@angular/forms';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LayoutModule
   ],
   providers: [MovieApiServiceService],
   bootstrap: [AppComponent]
